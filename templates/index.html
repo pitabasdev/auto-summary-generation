@@ -34,6 +34,22 @@
 			h4 {
 				text-align: center;
 			}
+			#arrow-img{
+				padding: 20px;
+				display: flex;
+				position:relative;
+				left:500px;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			#textarea-text{
+				position:relative;
+				top:-260px;
+			}
+			#summary-btn{
+				position:relative;
+				left:80px;
+			}
 		</style>
 	</head>
 	<body>
@@ -68,21 +84,34 @@
 		<div class="container text-center">
 			<div class="row">
 				<div class="col">
-					<textarea
-						class="form-control rounded float-start"
-						placeholder="Text......."
-						id="floatingTextarea2"
-						style="height: 300px; width: 500px"
-					>{{ extracted_text }}</textarea>
-				</div>
-				<div class="col">
 					<div class="" id="arrow-bg">
 						<img
 							src="{{ url_for('static', filename='images/arrow.png') }}"
 							class="img-fluid"
 							alt=""
+							id="arrow-img"
 							style="height: 300px; width: 300px"
 						/>
+						<form method="POST" action="/generate_summary">
+							<textarea
+								name="text"
+								id="textarea-text"
+								class="form-control rounded float-start"
+								placeholder="Text......."
+								id="floatingTextarea2"
+								style="height: 300px; width: 500px"
+							>
+{{ extracted_text }}</textarea
+							>
+							<button
+							id="summary-btn"
+								type="submit"
+								style="margin: -40px"
+								class="btn btn-primary rounded mx-auto d-block"
+							>
+								Summary
+							</button>
+						</form>
 					</div>
 				</div>
 				<div class="col">
@@ -92,7 +121,8 @@
 						id="floatingTextarea2"
 						style="height: 300px; width: 500px"
 					>
-</textarea
+					{{ summary }}
+				</textarea
 					>
 				</div>
 			</div>
