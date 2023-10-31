@@ -18,11 +18,10 @@ This is a Flask-based web application that allows users to perform two main task
 ### Prerequisites
 
 - Python 3.7+
-- Install required Python packages: `pip install -r requirements.txt`
 
 ### Running the Application
 
-1. Clone the repository: `git clone https://github.com/yourusername/your-repo.git`
+1. Clone the repository: `git clone https://github.com/pitabasdev/auto-summary-generation`
 2. Change directory: `cd your-repo`
 3. Start the Flask app: `python app.py`
 4. Access the application in your web browser at `http://localhost:5000`
