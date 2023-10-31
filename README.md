@@ -38,3 +38,5 @@ This is a Flask-based web application that allows users to perform two main task
 - Tesseract OCR (for image-to-text)
 - NLTK (Natural Language Toolkit) for text summarization
 
+![image](https://github.com/pitabasdev/weather-app/assets/85897297/50d3aee7-953a-4d3a-b9d8-2f7d4b3a9808)
+
